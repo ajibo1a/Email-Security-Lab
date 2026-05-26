@@ -44,7 +44,7 @@ SPF Verification:
 dig @[server-ip] globomantics.co txt
 ```
 
-![SPF Verification](screenshots/spf-verification.png)
+![SPF Verification](screenshots/spf verification.png)
 
 ---
 
@@ -58,11 +58,11 @@ openssl genrsa -out private.key 2048
 openssl rsa -in private.key -pubout -out public.key
 ```
 
-![DKIM Key Generation](screenshots/dkim-key.png)
+![DKIM Key Generation](screenshots/DKIM Key.png)
 
 The DKIM public key was added to the DNS zone file.
 
-![Zone File Configuration](screenshots/zone-file-config.png)
+![Zone File Configuration](screenshots/zone file config.png)
 
 The DNS service was restarted to apply the changes.
 
@@ -70,14 +70,14 @@ The DNS service was restarted to apply the changes.
 sudo service bind9 restart
 ```
 
-![DNS Restart](screenshots/dns-restart.png)
+![DNS Restart](screenshots/DNS Restart.png)
 
 DKIM Verification:
 ```bash
 dig @[server-ip] mail._domainkey.globomantics.co txt
 ```
 
-![DKIM Verification](screenshots/dkim-verification.png)
+![DKIM Verification](screenshots/DKIM Verification.png)
 
 ---
 
@@ -95,7 +95,7 @@ DMARC Verification:
 dig @[server-ip] _dmarc.globomantics.co txt
 ```
 
-![DMARC Verification](screenshots/dmarc-verification.png)
+![DMARC Verification](screenshots/DMARC Verification.png)
 
 ---
 
